@@ -4,7 +4,7 @@ set -e
 
 APP="adwcolors"
 REPO="https://github.com/yioannides/adwcolors"
-INSTALL_DIR="$HOME/.{$APP}"
+INSTALL_DIR="$HOME/.$APP"
 
 echo -e "\nInstalling \033[1m${APP}\033[22m..."
 sleep 1.5
@@ -19,14 +19,15 @@ else
 fi
 
 if [ -d "$INSTALL_DIR" ]; then
-	cd $INSTALL_DIR
+	cd "$INSTALL_DIR"
 	git pull
 else
 	git clone "$REPO" "$INSTALL_DIR"
+fi
 	
 # create alias
-ALIAS_CMD="alias {$APP}='{$INSTALL_DIR}/{$APP}.sh'"
+ALIAS_CMD="alias $APP='$INSTALL_DIR/$APP.sh'"
 
-if ! -Fxq "$ALIAS_CMD" "$SHELL_RC" 2>/dev/null; then
+if ! grep -Fxq "$ALIAS_CMD" "$SHELL_RC" 2>/dev/null; then
 	echo "$ALIAS_CMD" >> "$SHELL_RC"
 fi
