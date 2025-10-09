@@ -25,7 +25,7 @@ else
 	git clone "$REPO" "$INSTALL_DIR"
 	
 # create alias
-ALIAS_CMD="alias {$APP}='$INSTALL_DIR/{$APP}.sh'"
+ALIAS_CMD="alias {$APP}='{$INSTALL_DIR}/{$APP}.sh'"
 
 if ! -Fxq "$ALIAS_CMD" "$SHELL_RC" 2>/dev/null; then
 	echo "$ALIAS_CMD" >> "$SHELL_RC"
