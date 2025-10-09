@@ -23,7 +23,6 @@ if [ -d "$INSTALL_DIR" ]; then
 	git pull
 else
 	git clone "$REPO" "$INSTALL_DIR"
-	cd "$INSTALL_DIR"
 fi
 
 rm -rf LICENSE README.md install.sh
