@@ -1,3 +1,6 @@
+> [!WARNING]
+> **MIGRATED TO GITLAB:** https://gitlab.com/yioannides/adwcolors
+
 ![showcase](https://github.com/user-attachments/assets/a5a4d712-8f65-40c8-88c9-ab438540f4d7)
 
 <b>adwcolors</b> is a simple terminal script for displaying the Adwaita color palette for GNOME
