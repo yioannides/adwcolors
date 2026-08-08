@@ -6,7 +6,7 @@ APP="adwcolors"
 REPO="https://github.com/yioannides/adwcolors"
 INSTALL_DIR="$HOME/.$APP"
 
-echo -e "\nInstalling \033[1m${APP}\033[22m..."
+echo -e "\nInstalling \e[1m${APP}\e[22m..."
 sleep 1.5
 
 # Determine the shell rc file
